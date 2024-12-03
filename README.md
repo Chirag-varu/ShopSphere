@@ -1,6 +1,6 @@
 ---
-# ShopSphere 🌐  
-**ShopSphere** is a modern and scalable e-commerce platform designed to provide users with a seamless shopping experience. With its clean UI, powerful backend, and advanced features, ShopSphere aims to revolutionize online shopping.
+## ShopSphere 🌐
+ShopSphere is a modern and scalable e-commerce platform designed to provide users with a seamless shopping experience. With its clean UI, powerful backend, and advanced features, ShopSphere aims to revolutionize online shopping.
 ---
 
 ## Features ✨
