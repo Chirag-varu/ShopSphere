@@ -3,7 +3,9 @@
 ShopSphere is a modern and scalable e-commerce platform designed to provide users with a seamless shopping experience. With its clean UI, powerful backend, and advanced features, ShopSphere aims to revolutionize online shopping.
 ---
 
-## Features ✨
+Live link: https://shop-sphere-eta-five.vercel.app/
+
+## Features (Upcoming) ✨
 
 - **User-Friendly Interface**: Intuitive design for a smooth user experience.  
 - **Responsive Design**: Optimized for mobile, tablet, and desktop.  
