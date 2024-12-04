@@ -117,11 +117,15 @@ We welcome contributions from everyone! Follow these steps to contribute to Shop
 
 ---
 
-## License 📜
+## 🤝 **Contributing**:
 
-This project is licensed under the [MIT License](LICENSE).
+Feel free to fork the repository, make changes, and submit a pull request with your improvements! All contributions are appreciated. 🙌
 
 ---
+
+## 💬 **Feedback**:
+
+I would love to hear your thoughts and feedback! Feel free to open issues or leave comments for suggestions. 😊
 
 ## Contact 📧
 

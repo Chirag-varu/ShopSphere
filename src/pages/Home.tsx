@@ -1,4 +1,3 @@
-import Navbar from "../Components/Navbar";
 import { Hero } from "../Components/Hero";
 import b from "../assets/baner-removebg.png";
 import f1 from "../assets/img/features/f1.png";
