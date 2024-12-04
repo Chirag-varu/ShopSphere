@@ -85,7 +85,7 @@ export function Home() {
 
       {/* Featured Products */}
       <div className="flex flex-col items-center justify-center">
-        <p className="text-5xl font-bold mb-4">Featured Products</p>
+        <p className="md:text-5xl text-3xl font-bold mb-4">Featured Products</p>
         <p className="text-md text-[#465b52] mb-8">
           Summer Collection New Modern Design
         </p>
@@ -441,7 +441,7 @@ export function Home() {
 
       {/* New Arrivals */}
       <div className="flex flex-col items-center justify-center mt-12">
-        <p className="text-5xl font-bold mb-4">New Arrivals</p>
+        <p className="md:text-5xl text-3xl font-bold mb-4">New Arrivals</p>
         <p className="text-md text-[#465b52] mb-8">
           Summer Collection New Modern Design
         </p>
@@ -778,12 +778,19 @@ export function Home() {
         </div>
       </div>
 
-      <section id="newsletter" className="bg-gray-300 py-8 px-6 mb-8 mt-8">
+      {/* News letter */}
+      <section
+        id="newsletter"
+        className="bg-cover bg-center py-8 px-6 mb-8 mt-8"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1472289065668-ce650ac443d2?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+        }}
+      >
         <div className="text-center mb-6">
-          <h4 className="text-2xl font-semibold mb-2">
+          <h4 className="text-2xl font-semibold mb-2 text-white">
             Sign Up For Newsletters
           </h4>
-          <p className="text-gray-600">
+          <p className="text-gray-200">
             Get E-mail updates about our latest shop and{" "}
             <span className="text-red-500 font-bold">special offers.</span>
           </p>
@@ -800,7 +807,8 @@ export function Home() {
         </div>
       </section>
 
-      <footer className="bg-gray-900 text-gray-300 py-10 px-6">
+      {/* Footer */}
+      <footer className="text-gray-900 py-10 px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Contact Section */}
           <div>

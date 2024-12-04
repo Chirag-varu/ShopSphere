@@ -2,8 +2,8 @@ import Hero1 from "../assets/img/hero4.png";
 
 export function Hero() {
   return (
-    <div className="bg-[#e3e6f3] flex items-center justify-center h-[45.9rem] relative overflow-hidden w-full">
-      <div className="z-10 absolute md:left-24">
+    <div className="bg-[#e3e6f3] flex items-center justify-center h-[25rem] md:h-[40.8rem] lg:h-[45.9rem] relative overflow-hidden w-full">
+      <div className="z-10 absolute md:left-24 left-8">
         <p
           className="text-2xl mb-3"
           style={{ fontFamily: "'Spartan', sans-serif" }}
@@ -11,7 +11,7 @@ export function Hero() {
           Trade-in-offer
         </p>
         <p
-          className="md:text-5xl text-2xl font-semibold mb-3 subpixel-antialiased"
+          className="lg:text-5xl md:text-4xl text-md font-semibold mb-3 subpixel-antialiased"
           style={{ fontFamily: "'Spartan', sans-serif" }}
         >
           Super value deals
@@ -26,7 +26,7 @@ export function Hero() {
           Save more with coupons <br />& up to 70% off!
         </p>
 
-        <button className="bg-transparent bg-[url('/src/assets/button.png')] bg-no-repeat text-[#088178] px-20 py-3.5 border-0 cursor-pointer font-bold text-sm">
+        <button className="bg-transparent bg-[url('/src/assets/button.png')] bg-no-repeat text-[#088178] px-14 sm:px-20 py-2 sm:py-3.5 border-0 cursor-pointer font-bold text-sm">
           Shop Now
         </button>
       </div>
@@ -34,7 +34,7 @@ export function Hero() {
         <img
           src={Hero1}
           alt=""
-          className="md:h-[46rem] h-[25rem]  scale-125 bg-transparent"
+          className="md:h-[46rem] h-[25rem] scale-125 bg-transparent z-30"
         />
       </div>
     </div>
