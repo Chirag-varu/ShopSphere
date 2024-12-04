@@ -431,7 +431,7 @@ export function Home() {
             Up to <span className="text-[#ef3636]">70% Off</span> - All t-Shirts
             & Accessories
           </p>
-          <button className="bg-slate-50 text-black hover:bg-slate-500 hover:text-white mt-4 px-6 py-2 rounded-md ">
+          <button className="bg-slate-50 text-black hover:bg-slate-500 hover:text-cyan-600 mt-4 px-6 py-2 rounded-md ">
             Explore More
           </button>
         </div>
@@ -838,27 +838,27 @@ export function Home() {
             <h4 className="text-xl font-bold mb-4">About</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="#" className="hover:text-cyan-600">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="#" className="hover:text-cyan-600">
                   Delivery Information
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="#" className="hover:text-cyan-600">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="#" className="hover:text-cyan-600">
                   Terms & Conditions
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="#" className="hover:text-cyan-600">
                   Contact Us
                 </a>
               </li>
@@ -870,27 +870,27 @@ export function Home() {
             <h4 className="text-xl font-bold mb-4">My Account</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="#" className="hover:text-cyan-600">
                   Sign In
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="#" className="hover:text-cyan-600">
                   View Cart
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="#" className="hover:text-cyan-600">
                   My Wishlist
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="#" className="hover:text-cyan-600">
                   Track My Order
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="#" className="hover:text-cyan-600">
                   Help
                 </a>
               </li>
