@@ -90,7 +90,7 @@ export function Home() {
       </div>
 
       <div className="flex mb-4 flex-wrap">
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4">
+        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
           <div className="relative">
             {/* Image Section */}
             <img
@@ -131,7 +131,7 @@ export function Home() {
             </div>
           </div>
         </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4">
+        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
           <div className="relative">
             {/* Image Section */}
             <img
@@ -172,7 +172,7 @@ export function Home() {
             </div>
           </div>
         </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4">
+        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
           <div className="relative">
             {/* Image Section */}
             <img
@@ -213,7 +213,7 @@ export function Home() {
             </div>
           </div>
         </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4">
+        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
           <div className="relative">
             {/* Image Section */}
             <img
@@ -254,7 +254,7 @@ export function Home() {
             </div>
           </div>
         </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4">
+        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
           <div className="relative">
             {/* Image Section */}
             <img
@@ -295,7 +295,7 @@ export function Home() {
             </div>
           </div>
         </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4">
+        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
           <div className="relative">
             {/* Image Section */}
             <img
@@ -336,7 +336,7 @@ export function Home() {
             </div>
           </div>
         </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4">
+        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
           <div className="relative">
             {/* Image Section */}
             <img
@@ -377,7 +377,7 @@ export function Home() {
             </div>
           </div>
         </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4">
+        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
           <div className="relative">
             {/* Image Section */}
             <img
@@ -446,7 +446,7 @@ export function Home() {
       </div>
 
       <div className="flex mb-4 flex-wrap">
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4">
+        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
           <div className="relative">
             {/* Image Section */}
             <img
@@ -487,7 +487,7 @@ export function Home() {
             </div>
           </div>
         </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4">
+        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
           <div className="relative">
             {/* Image Section */}
             <img
@@ -528,7 +528,7 @@ export function Home() {
             </div>
           </div>
         </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4">
+        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
           <div className="relative">
             {/* Image Section */}
             <img
@@ -569,7 +569,7 @@ export function Home() {
             </div>
           </div>
         </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4">
+        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
           <div className="relative">
             {/* Image Section */}
             <img
@@ -610,7 +610,7 @@ export function Home() {
             </div>
           </div>
         </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4">
+        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
           <div className="relative">
             {/* Image Section */}
             <img
@@ -651,7 +651,7 @@ export function Home() {
             </div>
           </div>
         </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4">
+        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
           <div className="relative">
             {/* Image Section */}
             <img
@@ -692,7 +692,7 @@ export function Home() {
             </div>
           </div>
         </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4">
+        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
           <div className="relative">
             {/* Image Section */}
             <img
@@ -733,7 +733,7 @@ export function Home() {
             </div>
           </div>
         </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4">
+        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
           <div className="relative">
             {/* Image Section */}
             <img

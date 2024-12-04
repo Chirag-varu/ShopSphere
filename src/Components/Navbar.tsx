@@ -13,7 +13,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex items-center justify-between py-4 px-6 sm:px-10 md:px-20 w-full bg-[#e3e6f3] sticky top-0 left-0 drop-shadow-md z-20 h-[5.8rem]">
+    <nav className="flex items-center justify-between py-4 px-6 sm:px-10 md:px-20 w-full bg-[#e3e6f3] sticky top-0 left-0 drop-shadow-md z-50 h-[5.8rem]">
       {/* Logo */}
       <div>
         <img

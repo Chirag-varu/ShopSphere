@@ -33,7 +33,7 @@ export function About() {
       <div className="flex flex-col md:flex-row items-center justify-between w-full p-6 md:p-16 space-y-6 md:space-y-0">
         {/* Image Section */}
         <div
-          className="w-full md:w-1/2 h-64 md:h-[60vh] bg-cover bg-center rounded-lg shadow-lg"
+          className="w-full md:w-1/2 h-64 md:h-[60vh] bg-cover bg-center rounded-lg shadow-lg border border-gray-300"
           style={{ backgroundImage: `url(${a6})` }}
         ></div>
 
