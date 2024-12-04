@@ -40,7 +40,6 @@ import play from "../assets/img/pay/play.jpg";
 export function Home() {
   return (
     <div className="h-screen w-full">
-      <Navbar />
       <Hero />
 
       {/* Cards */}

@@ -1,15 +1,21 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
-import banner from '../assets/baner-removebg.png'
+import { Link } from 'react-router-dom'; // Import Link for routing
+import banner from '../assets/baner-removebg.png';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Function to close the menu when a menu item is clicked
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="flex items-center justify-between py-4 px-6 sm:px-10 md:px-20 w-full bg-[#e3e6f3] sticky top-0 left-0 drop-shadow-md z-20 h-[5.8rem]">
       {/* Logo */}
-      <div> 
+      <div>
         <img
           src={banner}
           alt="Logo"
@@ -29,11 +35,22 @@ export default function Navbar() {
         }`}
       >
         <ul className="flex flex-col md:flex-row md:space-x-6 items-center md:items-baseline text-center font-semibold text-lg">
-          <li className="cursor-pointer hover:text-[#088178] py-2 md:py-0">Home</li>
-          <li className="cursor-pointer hover:text-[#088178] py-2 md:py-0">Shop</li>
-          <li className="cursor-pointer hover:text-[#088178] py-2 md:py-0">Blog</li>
-          <li className="cursor-pointer hover:text-[#088178] py-2 md:py-0">About</li>
-          <li className="cursor-pointer hover:text-[#088178] py-2 md:py-0">Contact</li>
+          {/* Menu items with closing the menu on click */}
+          <li className="cursor-pointer hover:text-[#088178] py-2 md:py-0">
+            <Link to="/" onClick={closeMenu}>Home</Link>
+          </li>
+          <li className="cursor-pointer hover:text-[#088178] py-2 md:py-0">
+            <Link to="/shop" onClick={closeMenu}>Shop</Link>
+          </li>
+          <li className="cursor-pointer hover:text-[#088178] py-2 md:py-0">
+            <Link to="/blog" onClick={closeMenu}>Blog</Link>
+          </li>
+          <li className="cursor-pointer hover:text-[#088178] py-2 md:py-0">
+            <Link to="/about" onClick={closeMenu}>About</Link>
+          </li>
+          <li className="cursor-pointer hover:text-[#088178] py-2 md:py-0">
+            <Link to="/contact" onClick={closeMenu}>Contact</Link>
+          </li>
           <li className="cursor-pointer hover:text-[#088178] py-2 md:py-0">
             <FontAwesomeIcon icon={faCartShopping} />
           </li>
@@ -42,4 +59,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
