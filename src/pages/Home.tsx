@@ -918,7 +918,7 @@ export function Home() {
           </div>
         </div>
         <div className="text-center mt-10">
-          <p className="text-gray-500">© 2023, Rahul - E-commerce Template</p>
+          <p className="text-gray-500">© 2023, Chirag Varu - E-commerce</p>
         </div>
       </footer>
     </div>
