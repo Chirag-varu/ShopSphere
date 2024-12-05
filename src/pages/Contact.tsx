@@ -15,9 +15,15 @@ import ContactForm from "../Components/ContactForm";
 import p1 from "../assets/bag-light-removebg.png";
 import p2 from "../assets/img/people/2.png";
 import p3 from "../assets/img/people/3.png";
+import { motion } from "framer-motion";
 
 export function Contact() {
   return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
     <div className="h-auto w-full">
       {/* Banner Section */}
       <div
@@ -31,7 +37,7 @@ export function Contact() {
       </div>
 
       {/* Main */}
-      <div className="flex flex-col md:flex-row items-center justify-between w-full p-8 space-y-8 md:space-y-0 overflow-hidden">
+      <div className="flex flex-col md:flex-row items-center justify-around w-full p-8 space-y-8 md:space-y-0 overflow-hidden">
         {/* Contact Details */}
         <div className="flex flex-col items-center justify-center space-y-6 bg-gray-100 p-8 rounded-lg shadow-md w-full sm:w-auto hover:bg-gray-200">
           <h2 className="text-3xl font-semibold text-gray-800">GET IN TOUCH</h2>
@@ -61,7 +67,7 @@ export function Contact() {
         </div>
 
         {/* Map */}
-        <div className="w-full max-w-3xl mt-6 sm:mt-0">
+        <div className="w-full max-w-4xl mt-6 sm:mt-0">
           <iframe
             title="Google Map"
             className="w-full h-[300px] rounded-lg shadow-md"
@@ -274,5 +280,6 @@ export function Contact() {
         </div>
       </footer>
     </div>
+    </motion.div>
   );
 }

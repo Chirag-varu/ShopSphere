@@ -29,9 +29,15 @@ import {
 import app from "../assets/img/pay/app.jpg";
 import pay from "../assets/img/pay/pay.png";
 import play from "../assets/img/pay/play.jpg";
+import { motion } from "framer-motion";
 
 export function Shop() {
   return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
     <div className="h-screen w-full">
       {/* Banner Section */}
       <div
@@ -869,5 +875,6 @@ export function Shop() {
         </div>
       </footer>
     </div>
+    </motion.div>
   );
 }
