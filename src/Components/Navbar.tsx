@@ -1,8 +1,12 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link for routing
-import banner from '../assets/baner-removebg.png';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCartShopping,
+  faBars,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link for routing
+import banner from "../assets/baner-removebg.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,35 +28,50 @@ export default function Navbar() {
       </div>
 
       {/* Hamburger Menu Icon */}
-      <div className="text-2xl cursor-pointer md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+      <div
+        className="text-2xl cursor-pointer md:hidden"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
         <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
       </div>
 
       {/* Menu Items */}
       <div
         className={`absolute md:static top-16 left-0 w-full md:w-auto bg-[#e3e6f3] md:bg-transparent transition-all duration-300 md:flex md:items-center ${
-          menuOpen ? 'block' : 'hidden'
+          menuOpen ? "block" : "hidden"
         }`}
       >
         <ul className="flex flex-col md:flex-row md:space-x-6 items-center md:items-baseline text-center font-semibold text-lg">
           {/* Menu items with closing the menu on click */}
           <li className="cursor-pointer hover:text-[#088178] py-2 md:py-0">
-            <Link to="/" onClick={closeMenu}>Home</Link>
+            <Link to="/" onClick={closeMenu}>
+              Home
+            </Link>
           </li>
           <li className="cursor-pointer hover:text-[#088178] py-2 md:py-0">
-            <Link to="/shop" onClick={closeMenu}>Shop</Link>
+            <Link to="/shop" onClick={closeMenu}>
+              Shop
+            </Link>
           </li>
           <li className="cursor-pointer hover:text-[#088178] py-2 md:py-0">
-            <Link to="/blog" onClick={closeMenu}>Blog</Link>
+            <Link to="/blog" onClick={closeMenu}>
+              Blog
+            </Link>
           </li>
           <li className="cursor-pointer hover:text-[#088178] py-2 md:py-0">
-            <Link to="/about" onClick={closeMenu}>About</Link>
+            <Link to="/about" onClick={closeMenu}>
+              About
+            </Link>
           </li>
           <li className="cursor-pointer hover:text-[#088178] py-2 md:py-0">
-            <Link to="/contact" onClick={closeMenu}>Contact</Link>
+            <Link to="/contact" onClick={closeMenu}>
+              Contact
+            </Link>
           </li>
           <li className="cursor-pointer hover:text-[#088178] py-2 md:py-0">
-            <FontAwesomeIcon icon={faCartShopping} />
+            <Link to="/Cart" onClick={closeMenu}>
+              <FontAwesomeIcon icon={faCartShopping} />
+            </Link>
           </li>
         </ul>
       </div>

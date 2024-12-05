@@ -160,7 +160,7 @@ export function Blog() {
           </div>
         </section>
 
-        {/* Footer Section */}
+        {/* Footer */}
         <footer className="text-gray-900 py-10 px-6 bg-gray-100">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Contact Section */}
@@ -173,18 +173,95 @@ export function Blog() {
               <p className="mb-2">
                 <strong>Phone:</strong> +91 xyz...
               </p>
-              <p className="mb-4">...</p>
-            </div>
-            {/* Social Media Section */}
-            <div className="flex flex-col gap-4">
-              <h4 className="text-xl font-bold mb-4">Follow Us</h4>
-              <div className="flex gap-4">
-                <FaFacebookSquare className="w-6 h-6 text-gray-600 hover:text-cyan-600" />
-                <FaInstagram className="w-6 h-6 text-gray-600 hover:text-cyan-600" />
-                <FaTwitterSquare className="w-6 h-6 text-gray-600 hover:text-cyan-600" />
-                <FaPinterestP className="w-6 h-6 text-gray-600 hover:text-cyan-600" />
-                <FaYoutube className="w-6 h-6 text-gray-600 hover:text-cyan-600" />
+              <p className="mb-4">
+                <strong>Hours:</strong> 10:00 - 10:00, Mon-Sat
+              </p>
+              <div>
+                <h4 className="text-lg font-bold mb-2">Follow Us</h4>
+                <div className="flex space-x-4 text-2xl">
+                  <FaFacebookSquare className="text-blue-500 hover:text-blue-600 cursor-pointer" />
+                  <FaInstagram className="text-pink-500 hover:text-pink-600 cursor-pointer" />
+                  <FaTwitterSquare className="text-blue-400 hover:text-blue-500 cursor-pointer" />
+                  <FaPinterestP className="text-red-500 hover:text-red-600 cursor-pointer" />
+                  <FaYoutube className="text-red-600 hover:text-red-700 cursor-pointer" />
+                </div>
               </div>
+            </div>
+
+            {/* About Section */}
+            <div>
+              <h4 className="text-xl font-bold mb-4">About</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="hover:text-cyan-600">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-cyan-600">
+                    Delivery Information
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-cyan-600">
+                    Terms & Conditions
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-cyan-600">
+                    Privacy Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Links Section */}
+            <div>
+              <h4 className="text-xl font-bold mb-4">Quick Links</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="hover:text-cyan-600">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-cyan-600">
+                    Products
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-cyan-600">
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-cyan-600">
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Our Policies */}
+            <div>
+              <h4 className="text-xl font-bold mb-4">Policies</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="hover:text-cyan-600">
+                    Payment Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-cyan-600">
+                    Refund Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-cyan-600">
+                    Shipping Policy
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </footer>
