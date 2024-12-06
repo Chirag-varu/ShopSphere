@@ -35,8 +35,146 @@ import n8 from "../assets/img/products/n8.jpg";
 import app from "../assets/img/pay/app.jpg";
 import pay from "../assets/img/pay/pay.png";
 import play from "../assets/img/pay/play.jpg";
+import { useCart } from "../Components/CartContext";
+import { ProductCard } from "../Components/Product";
 
 export function Home() {
+  const { addToCart } = useCart();
+
+  const products = [
+    {
+      id: 1,
+      name: "Cartoon Astronaut T-Shirts",
+      brand: "adidas",
+      price: 300,
+      quantity: 1,
+      image: p1,
+    },
+    {
+      id: 2,
+      name: "Space Graphic Tee",
+      brand: "nike",
+      price: 350,
+      quantity: 1,
+      image: p2,
+    },
+    {
+      id: 3,
+      name: "Retro Astronaut Hoodie",
+      brand: "adidas",
+      price: 500,
+      quantity: 1,
+      image: p3,
+    },
+    {
+      id: 4,
+      name: "Retro Astronaut Hoodie",
+      brand: "adidas",
+      price: 500,
+      quantity: 1,
+      image: p4,
+    },
+    {
+      id: 5,
+      name: "Retro Astronaut Hoodie",
+      brand: "adidas",
+      price: 500,
+      quantity: 1,
+      image: p5,
+    },
+    {
+      id: 6,
+      name: "Retro Astronaut Hoodie",
+      brand: "adidas",
+      price: 500,
+      quantity: 1,
+      image: p6,
+    },
+    {
+      id: 7,
+      name: "Retro Astronaut Hoodie",
+      brand: "adidas",
+      price: 500,
+      quantity: 1,
+      image: p7,
+    },
+    {
+      id: 8,
+      name: "Retro Astronaut Hoodie",
+      brand: "adidas",
+      price: 500,
+      quantity: 1,
+      image: p8,
+    },
+  ];
+
+  const products2 = [
+    {
+      id: 9,
+      name: "Retro Astronaut Hoodie",
+      brand: "adidas",
+      price: 500,
+      quantity: 1,
+      image: n1,
+    },
+    {
+      id: 10,
+      name: "Retro Astronaut Hoodie",
+      brand: "adidas",
+      price: 500,
+      quantity: 1,
+      image: n2,
+    },
+    {
+      id: 11,
+      name: "Retro Astronaut Hoodie",
+      brand: "adidas",
+      price: 500,
+      quantity: 1,
+      image: n3,
+    },
+    {
+      id: 12,
+      name: "Retro Astronaut Hoodie",
+      brand: "adidas",
+      price: 500,
+      quantity: 1,
+      image: n4,
+    },
+    {
+      id: 13,
+      name: "Retro Astronaut Hoodie",
+      brand: "adidas",
+      price: 500,
+      quantity: 1,
+      image: n5,
+    },
+    {
+      id: 14,
+      name: "Retro Astronaut Hoodie",
+      brand: "adidas",
+      price: 500,
+      quantity: 1,
+      image: n6,
+    },
+    {
+      id: 15,
+      name: "Retro Astronaut Hoodie",
+      brand: "adidas",
+      price: 500,
+      quantity: 1,
+      image: n7,
+    },
+    {
+      id: 16,
+      name: "Retro Astronaut Hoodie",
+      brand: "adidas",
+      price: 500,
+      quantity: 1,
+      image: n8,
+    },
+  ];
+
   return (
     <div className="h-screen w-full">
       <Hero />
@@ -90,334 +228,13 @@ export function Home() {
       </div>
 
       <div className="flex mb-4 flex-wrap">
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
-          <div className="relative">
-            {/* Image Section */}
-            <img
-              src={p1}
-              alt="Cartoon Astronaut T-Shirts"
-              className="w-full object-cover rounded-2xl"
-            />
-          </div>
-          {/* Content Section */}
-          <div className="p-4">
-            {/* Title */}
-            {/* Brand */}
-            <p className="text-sm text-gray-500">adidas</p>
-            {/* Title */}
-            <p className="font-semibold text-xl text-gray-800">
-              Cartoon Astronaut T-Shirts
-            </p>
-            {/* Rating */}
-            <div className="flex items-center mt-2">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  className="h-4 w-4 text-yellow-400 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09L5.82 12.03 1.46 7.91l6.162-.894L10 2l2.378 5.016 6.162.894-4.36 4.12 1.697 6.06z" />
-                </svg>
-              ))}
-            </div>
-            {/* Price */}
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-blue-600 font-bold text-lg">Rs. 300</span>
-              <FontAwesomeIcon
-                icon={faCartShopping}
-                className="cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
-          <div className="relative">
-            {/* Image Section */}
-            <img
-              src={p2}
-              alt="Cartoon Astronaut T-Shirts"
-              className="w-full object-cover rounded-2xl"
-            />
-          </div>
-          {/* Content Section */}
-          <div className="p-4">
-            {/* Title */}
-            {/* Brand */}
-            <p className="text-sm text-gray-500">adidas</p>
-            {/* Title */}
-            <p className="font-semibold text-xl text-gray-800">
-              Cartoon Astronaut T-Shirts
-            </p>
-            {/* Rating */}
-            <div className="flex items-center mt-2">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  className="h-4 w-4 text-yellow-400 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09L5.82 12.03 1.46 7.91l6.162-.894L10 2l2.378 5.016 6.162.894-4.36 4.12 1.697 6.06z" />
-                </svg>
-              ))}
-            </div>
-            {/* Price */}
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-blue-600 font-bold text-lg">Rs. 300</span>
-              <FontAwesomeIcon
-                icon={faCartShopping}
-                className="cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
-          <div className="relative">
-            {/* Image Section */}
-            <img
-              src={p3}
-              alt="Cartoon Astronaut T-Shirts"
-              className="w-full object-cover rounded-2xl"
-            />
-          </div>
-          {/* Content Section */}
-          <div className="p-4">
-            {/* Title */}
-            {/* Brand */}
-            <p className="text-sm text-gray-500">adidas</p>
-            {/* Title */}
-            <p className="font-semibold text-xl text-gray-800">
-              Cartoon Astronaut T-Shirts
-            </p>
-            {/* Rating */}
-            <div className="flex items-center mt-2">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  className="h-4 w-4 text-yellow-400 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09L5.82 12.03 1.46 7.91l6.162-.894L10 2l2.378 5.016 6.162.894-4.36 4.12 1.697 6.06z" />
-                </svg>
-              ))}
-            </div>
-            {/* Price */}
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-blue-600 font-bold text-lg">Rs. 300</span>
-              <FontAwesomeIcon
-                icon={faCartShopping}
-                className="cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
-          <div className="relative">
-            {/* Image Section */}
-            <img
-              src={p4}
-              alt="Cartoon Astronaut T-Shirts"
-              className="w-full object-cover rounded-2xl"
-            />
-          </div>
-          {/* Content Section */}
-          <div className="p-4">
-            {/* Title */}
-            {/* Brand */}
-            <p className="text-sm text-gray-500">adidas</p>
-            {/* Title */}
-            <p className="font-semibold text-xl text-gray-800">
-              Cartoon Astronaut T-Shirts
-            </p>
-            {/* Rating */}
-            <div className="flex items-center mt-2">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  className="h-4 w-4 text-yellow-400 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09L5.82 12.03 1.46 7.91l6.162-.894L10 2l2.378 5.016 6.162.894-4.36 4.12 1.697 6.06z" />
-                </svg>
-              ))}
-            </div>
-            {/* Price */}
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-blue-600 font-bold text-lg">Rs. 300</span>
-              <FontAwesomeIcon
-                icon={faCartShopping}
-                className="cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
-          <div className="relative">
-            {/* Image Section */}
-            <img
-              src={p5}
-              alt="Cartoon Astronaut T-Shirts"
-              className="w-full object-cover rounded-2xl"
-            />
-          </div>
-          {/* Content Section */}
-          <div className="p-4">
-            {/* Title */}
-            {/* Brand */}
-            <p className="text-sm text-gray-500">adidas</p>
-            {/* Title */}
-            <p className="font-semibold text-xl text-gray-800">
-              Cartoon Astronaut T-Shirts
-            </p>
-            {/* Rating */}
-            <div className="flex items-center mt-2">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  className="h-4 w-4 text-yellow-400 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09L5.82 12.03 1.46 7.91l6.162-.894L10 2l2.378 5.016 6.162.894-4.36 4.12 1.697 6.06z" />
-                </svg>
-              ))}
-            </div>
-            {/* Price */}
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-blue-600 font-bold text-lg">Rs. 300</span>
-              <FontAwesomeIcon
-                icon={faCartShopping}
-                className="cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
-          <div className="relative">
-            {/* Image Section */}
-            <img
-              src={p6}
-              alt="Cartoon Astronaut T-Shirts"
-              className="w-full object-cover rounded-2xl"
-            />
-          </div>
-          {/* Content Section */}
-          <div className="p-4">
-            {/* Title */}
-            {/* Brand */}
-            <p className="text-sm text-gray-500">adidas</p>
-            {/* Title */}
-            <p className="font-semibold text-xl text-gray-800">
-              Cartoon Astronaut T-Shirts
-            </p>
-            {/* Rating */}
-            <div className="flex items-center mt-2">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  className="h-4 w-4 text-yellow-400 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09L5.82 12.03 1.46 7.91l6.162-.894L10 2l2.378 5.016 6.162.894-4.36 4.12 1.697 6.06z" />
-                </svg>
-              ))}
-            </div>
-            {/* Price */}
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-blue-600 font-bold text-lg">Rs. 300</span>
-              <FontAwesomeIcon
-                icon={faCartShopping}
-                className="cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
-          <div className="relative">
-            {/* Image Section */}
-            <img
-              src={p7}
-              alt="Cartoon Astronaut T-Shirts"
-              className="w-full object-cover rounded-2xl"
-            />
-          </div>
-          {/* Content Section */}
-          <div className="p-4">
-            {/* Title */}
-            {/* Brand */}
-            <p className="text-sm text-gray-500">adidas</p>
-            {/* Title */}
-            <p className="font-semibold text-xl text-gray-800">
-              Cartoon Astronaut T-Shirts
-            </p>
-            {/* Rating */}
-            <div className="flex items-center mt-2">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  className="h-4 w-4 text-yellow-400 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09L5.82 12.03 1.46 7.91l6.162-.894L10 2l2.378 5.016 6.162.894-4.36 4.12 1.697 6.06z" />
-                </svg>
-              ))}
-            </div>
-            {/* Price */}
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-blue-600 font-bold text-lg">Rs. 300</span>
-              <FontAwesomeIcon
-                icon={faCartShopping}
-                className="cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
-          <div className="relative">
-            {/* Image Section */}
-            <img
-              src={p8}
-              alt="Cartoon Astronaut T-Shirts"
-              className="w-full object-cover rounded-2xl"
-            />
-          </div>
-          {/* Content Section */}
-          <div className="p-4">
-            {/* Title */}
-            {/* Brand */}
-            <p className="text-sm text-gray-500">adidas</p>
-            {/* Title */}
-            <p className="font-semibold text-xl text-gray-800">
-              Cartoon Astronaut T-Shirts
-            </p>
-            {/* Rating */}
-            <div className="flex items-center mt-2">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  className="h-4 w-4 text-yellow-400 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09L5.82 12.03 1.46 7.91l6.162-.894L10 2l2.378 5.016 6.162.894-4.36 4.12 1.697 6.06z" />
-                </svg>
-              ))}
-            </div>
-            {/* Price */}
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-blue-600 font-bold text-lg">Rs. 300</span>
-              <FontAwesomeIcon
-                icon={faCartShopping}
-                className="cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
+        {products.map((product) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+            addToCart={addToCart}
+          />
+        ))}
       </div>
 
       {/* Repair Services */}
@@ -446,334 +263,13 @@ export function Home() {
       </div>
 
       <div className="flex mb-4 flex-wrap">
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
-          <div className="relative">
-            {/* Image Section */}
-            <img
-              src={n1}
-              alt="Cartoon Astronaut T-Shirts"
-              className="w-full object-cover rounded-2xl"
-            />
-          </div>
-          {/* Content Section */}
-          <div className="p-4">
-            {/* Title */}
-            {/* Brand */}
-            <p className="text-sm text-gray-500">adidas</p>
-            {/* Title */}
-            <p className="font-semibold text-xl text-gray-800">
-              Cartoon Astronaut T-Shirts
-            </p>
-            {/* Rating */}
-            <div className="flex items-center mt-2">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  className="h-4 w-4 text-yellow-400 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09L5.82 12.03 1.46 7.91l6.162-.894L10 2l2.378 5.016 6.162.894-4.36 4.12 1.697 6.06z" />
-                </svg>
-              ))}
-            </div>
-            {/* Price */}
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-blue-600 font-bold text-lg">Rs. 300</span>
-              <FontAwesomeIcon
-                icon={faCartShopping}
-                className="cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
-          <div className="relative">
-            {/* Image Section */}
-            <img
-              src={n2}
-              alt="Cartoon Astronaut T-Shirts"
-              className="w-full object-cover rounded-2xl"
-            />
-          </div>
-          {/* Content Section */}
-          <div className="p-4">
-            {/* Title */}
-            {/* Brand */}
-            <p className="text-sm text-gray-500">adidas</p>
-            {/* Title */}
-            <p className="font-semibold text-xl text-gray-800">
-              Cartoon Astronaut T-Shirts
-            </p>
-            {/* Rating */}
-            <div className="flex items-center mt-2">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  className="h-4 w-4 text-yellow-400 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09L5.82 12.03 1.46 7.91l6.162-.894L10 2l2.378 5.016 6.162.894-4.36 4.12 1.697 6.06z" />
-                </svg>
-              ))}
-            </div>
-            {/* Price */}
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-blue-600 font-bold text-lg">Rs. 300</span>
-              <FontAwesomeIcon
-                icon={faCartShopping}
-                className="cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
-          <div className="relative">
-            {/* Image Section */}
-            <img
-              src={n3}
-              alt="Cartoon Astronaut T-Shirts"
-              className="w-full object-cover rounded-2xl"
-            />
-          </div>
-          {/* Content Section */}
-          <div className="p-4">
-            {/* Title */}
-            {/* Brand */}
-            <p className="text-sm text-gray-500">adidas</p>
-            {/* Title */}
-            <p className="font-semibold text-xl text-gray-800">
-              Cartoon Astronaut T-Shirts
-            </p>
-            {/* Rating */}
-            <div className="flex items-center mt-2">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  className="h-4 w-4 text-yellow-400 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09L5.82 12.03 1.46 7.91l6.162-.894L10 2l2.378 5.016 6.162.894-4.36 4.12 1.697 6.06z" />
-                </svg>
-              ))}
-            </div>
-            {/* Price */}
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-blue-600 font-bold text-lg">Rs. 300</span>
-              <FontAwesomeIcon
-                icon={faCartShopping}
-                className="cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
-          <div className="relative">
-            {/* Image Section */}
-            <img
-              src={n4}
-              alt="Cartoon Astronaut T-Shirts"
-              className="w-full object-cover rounded-2xl"
-            />
-          </div>
-          {/* Content Section */}
-          <div className="p-4">
-            {/* Title */}
-            {/* Brand */}
-            <p className="text-sm text-gray-500">adidas</p>
-            {/* Title */}
-            <p className="font-semibold text-xl text-gray-800">
-              Cartoon Astronaut T-Shirts
-            </p>
-            {/* Rating */}
-            <div className="flex items-center mt-2">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  className="h-4 w-4 text-yellow-400 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09L5.82 12.03 1.46 7.91l6.162-.894L10 2l2.378 5.016 6.162.894-4.36 4.12 1.697 6.06z" />
-                </svg>
-              ))}
-            </div>
-            {/* Price */}
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-blue-600 font-bold text-lg">Rs. 300</span>
-              <FontAwesomeIcon
-                icon={faCartShopping}
-                className="cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
-          <div className="relative">
-            {/* Image Section */}
-            <img
-              src={n5}
-              alt="Cartoon Astronaut T-Shirts"
-              className="w-full object-cover rounded-2xl"
-            />
-          </div>
-          {/* Content Section */}
-          <div className="p-4">
-            {/* Title */}
-            {/* Brand */}
-            <p className="text-sm text-gray-500">adidas</p>
-            {/* Title */}
-            <p className="font-semibold text-xl text-gray-800">
-              Cartoon Astronaut T-Shirts
-            </p>
-            {/* Rating */}
-            <div className="flex items-center mt-2">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  className="h-4 w-4 text-yellow-400 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09L5.82 12.03 1.46 7.91l6.162-.894L10 2l2.378 5.016 6.162.894-4.36 4.12 1.697 6.06z" />
-                </svg>
-              ))}
-            </div>
-            {/* Price */}
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-blue-600 font-bold text-lg">Rs. 300</span>
-              <FontAwesomeIcon
-                icon={faCartShopping}
-                className="cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
-          <div className="relative">
-            {/* Image Section */}
-            <img
-              src={n6}
-              alt="Cartoon Astronaut T-Shirts"
-              className="w-full object-cover rounded-2xl"
-            />
-          </div>
-          {/* Content Section */}
-          <div className="p-4">
-            {/* Title */}
-            {/* Brand */}
-            <p className="text-sm text-gray-500">adidas</p>
-            {/* Title */}
-            <p className="font-semibold text-xl text-gray-800">
-              Cartoon Astronaut T-Shirts
-            </p>
-            {/* Rating */}
-            <div className="flex items-center mt-2">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  className="h-4 w-4 text-yellow-400 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09L5.82 12.03 1.46 7.91l6.162-.894L10 2l2.378 5.016 6.162.894-4.36 4.12 1.697 6.06z" />
-                </svg>
-              ))}
-            </div>
-            {/* Price */}
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-blue-600 font-bold text-lg">Rs. 300</span>
-              <FontAwesomeIcon
-                icon={faCartShopping}
-                className="cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
-          <div className="relative">
-            {/* Image Section */}
-            <img
-              src={n7}
-              alt="Cartoon Astronaut T-Shirts"
-              className="w-full object-cover rounded-2xl"
-            />
-          </div>
-          {/* Content Section */}
-          <div className="p-4">
-            {/* Title */}
-            {/* Brand */}
-            <p className="text-sm text-gray-500">adidas</p>
-            {/* Title */}
-            <p className="font-semibold text-xl text-gray-800">
-              Cartoon Astronaut T-Shirts
-            </p>
-            {/* Rating */}
-            <div className="flex items-center mt-2">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  className="h-4 w-4 text-yellow-400 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09L5.82 12.03 1.46 7.91l6.162-.894L10 2l2.378 5.016 6.162.894-4.36 4.12 1.697 6.06z" />
-                </svg>
-              ))}
-            </div>
-            {/* Price */}
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-blue-600 font-bold text-lg">Rs. 300</span>
-              <FontAwesomeIcon
-                icon={faCartShopping}
-                className="cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
-          <div className="relative">
-            {/* Image Section */}
-            <img
-              src={n8}
-              alt="Cartoon Astronaut T-Shirts"
-              className="w-full object-cover rounded-2xl"
-            />
-          </div>
-          {/* Content Section */}
-          <div className="p-4">
-            {/* Title */}
-            {/* Brand */}
-            <p className="text-sm text-gray-500">adidas</p>
-            {/* Title */}
-            <p className="font-semibold text-xl text-gray-800">
-              Cartoon Astronaut T-Shirts
-            </p>
-            {/* Rating */}
-            <div className="flex items-center mt-2">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  className="h-4 w-4 text-yellow-400 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09L5.82 12.03 1.46 7.91l6.162-.894L10 2l2.378 5.016 6.162.894-4.36 4.12 1.697 6.06z" />
-                </svg>
-              ))}
-            </div>
-            {/* Price */}
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-blue-600 font-bold text-lg">Rs. 300</span>
-              <FontAwesomeIcon
-                icon={faCartShopping}
-                className="cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
+        {products2.map((product) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+            addToCart={addToCart}
+          />
+        ))}
       </div>
 
       {/* News letter */}

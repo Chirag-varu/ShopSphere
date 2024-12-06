@@ -1,6 +1,4 @@
-import { useState } from "react";
-import p1 from "../assets/img/products/f1.jpg";
-import p2 from "../assets/img/products/f2.jpg";
+import { useState, useEffect } from "react";
 import {
   FaFacebookSquare,
   FaInstagram,
@@ -9,6 +7,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import b from "../assets/baner-removebg.png";
+import { useCart } from "../Components/CartContext";
 
 interface Product {
   id: number;
@@ -19,25 +18,14 @@ interface Product {
 }
 
 export const Cart = () => {
-  const [cartItems, setCartItems] = useState<Product[]>([
-    {
-      id: 1,
-      name: "Product 1",
-      price: 19.99,
-      quantity: 1,
-      image: p1,
-    },
-    {
-      id: 2,
-      name: "Product 2",
-      price: 29.99,
-      quantity: 2,
-      image: p2,
-    },
-  ]);
-
+  const { cart } = useCart();
+  const [cartItems, setCartItems] = useState<Product[]>(cart);
   const [couponCode, setCouponCode] = useState("");
   const [discount, setDiscount] = useState(0);
+
+  useEffect(() => {
+    setCartItems(cart);
+  }, [cart]);
 
   const handleQuantityChange = (id: number, quantity: number) => {
     setCartItems((prevItems) =>
@@ -48,8 +36,16 @@ export const Cart = () => {
   };
 
   const handleRemoveItem = (id: number) => {
-    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
-  };
+    setCartItems((prevItems) => {
+      // Remove item from state
+      const updatedCart = prevItems.filter((item) => item.id !== id);
+
+      // Update localStorage with the new cart after item removal
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+
+      return updatedCart; // Returning the updated cart
+    });
+  };  
 
   const calculateSubtotal = () => {
     return cartItems.reduce(
