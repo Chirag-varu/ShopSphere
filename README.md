@@ -62,6 +62,7 @@ Live link: https://shop-sphere-eta-five.vercel.app/
      PORT=5000
      MONGO_URI=your-mongodb-uri
      JWT_SECRET=your-jwt-secret
+     CORS_ORIGIN=http://localhost:3000
      ```
 
 4. **Start the Application**:
