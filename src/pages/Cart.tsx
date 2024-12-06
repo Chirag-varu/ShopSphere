@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   FaFacebookSquare,
   FaInstagram,
@@ -9,53 +9,24 @@ import {
 import b from "../assets/baner-removebg.png";
 import { useCart } from "../Components/CartContext";
 
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-  quantity: number;
-  image: string;
-}
-
 export const Cart = () => {
-  const { cart } = useCart();
-  const [cartItems, setCartItems] = useState<Product[]>(cart);
+  const { cart, removeFromCart, addToCart } = useCart();
   const [couponCode, setCouponCode] = useState("");
   const [discount, setDiscount] = useState(0);
 
-  useEffect(() => {
-    setCartItems(cart);
-  }, [cart]);
-
   const handleQuantityChange = (id: number, quantity: number) => {
-    setCartItems((prevItems) =>
-      prevItems.map((item) =>
-        item.id === id ? { ...item, quantity: Math.max(1, quantity) } : item
-      )
-    );
+    addToCart({ id, name: "", price: 0, quantity, image: "" }); // Call addToCart to update quantity
   };
 
   const handleRemoveItem = (id: number) => {
-    setCartItems((prevItems) => {
-      // Remove item from state
-      const updatedCart = prevItems.filter((item) => item.id !== id);
-
-      // Update localStorage with the new cart after item removal
-      localStorage.setItem("cart", JSON.stringify(updatedCart));
-
-      return updatedCart; // Returning the updated cart
-    });
-  };  
+    removeFromCart(id);
+  };
 
   const calculateSubtotal = () => {
-    return cartItems.reduce(
-      (total, item) => total + item.price * item.quantity,
-      0
-    );
+    return cart.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
   const applyCoupon = () => {
-    // Example of applying a coupon with a 10% discount
     if (couponCode === "SAVE10") {
       setDiscount(0.1);
     } else {
@@ -71,13 +42,13 @@ export const Cart = () => {
   };
 
   return (
-    <div>
-      <div className="max-w-7xl mx-auto px-4 py-8">
+    <div className="flex flex-col min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 py-8 flex-grow">
         <h1 className="text-3xl font-semibold text-center mb-8">
           Shopping Cart
         </h1>
 
-        {cartItems.length === 0 ? (
+        {cart.length === 0 ? (
           <div className="text-center text-lg">Your cart is empty.</div>
         ) : (
           <div>
@@ -94,7 +65,7 @@ export const Cart = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {cartItems.map((item) => (
+                  {cart.map((item) => (
                     <tr key={item.id} className="border-b">
                       <td className="px-6 py-4">
                         <button
