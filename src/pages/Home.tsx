@@ -6,8 +6,6 @@ import f3 from "../assets/img/features/f3.png";
 import f4 from "../assets/img/features/f4.png";
 import f5 from "../assets/img/features/f5.png";
 import f6 from "../assets/img/features/f6.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import p1 from "../assets/img/products/f1.jpg";
 import p2 from "../assets/img/products/f2.jpg";
 import p3 from "../assets/img/products/f3.jpg";
