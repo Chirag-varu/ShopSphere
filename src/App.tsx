@@ -12,7 +12,7 @@ import { ScrollToTop } from './Components/ScrollToTop';
 function App() {
   return (
     <CartProvider>
-      <Router>
+      <Router> 
         <Navbar />
         <ScrollToTop /> 
         <Routes>

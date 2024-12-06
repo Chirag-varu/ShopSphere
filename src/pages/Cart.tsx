@@ -26,6 +26,11 @@ export const Cart = () => {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
+  const calculateDiscountedSubtotal = () => {
+    const subtotal = calculateSubtotal();
+    return subtotal - subtotal * discount;
+  };
+
   const applyCoupon = () => {
     if (couponCode === "SAVE10") {
       setDiscount(0.1);
@@ -42,8 +47,8 @@ export const Cart = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 py-8 flex-grow">
+    <div className="flex flex-col min-h-screen w-full">
+      <div className="max-w-7xl mx-auto px-4 py-8 flex-grow w-full">
         <h1 className="text-3xl font-semibold text-center mb-8">
           Shopping Cart
         </h1>
@@ -83,7 +88,7 @@ export const Cart = () => {
                         />
                       </td>
                       <td className="px-6 py-4">{item.name}</td>
-                      <td className="px-6 py-4">${item.price.toFixed(2)}</td>
+                      <td className="px-6 py-4">Rs. {item.price.toFixed(2)}</td>
                       <td className="px-6 py-4">
                         <div className="flex items-center space-x-2">
                           <button
@@ -106,7 +111,7 @@ export const Cart = () => {
                         </div>
                       </td>
                       <td className="px-6 py-4">
-                        ${(item.price * item.quantity).toFixed(2)}
+                        Rs. {(item.price * item.quantity).toFixed(2)}
                       </td>
                     </tr>
                   ))}
@@ -140,9 +145,21 @@ export const Cart = () => {
               <div className="flex justify-between mt-4 border-t pt-4">
                 <div className="text-lg font-medium">Cart Subtotal:</div>
                 <div className="text-lg font-medium">
-                  ${calculateSubtotal().toFixed(2)}
+                  Rs. {calculateSubtotal().toFixed(2)}
                 </div>
               </div>
+
+              {discount > 0 && (
+                <div className="flex justify-between mt-2 text-green-600">
+                  <div className="text-lg font-medium">
+                    Discounted Subtotal:
+                  </div>
+                  <div className="text-lg font-medium">
+                    Rs. {calculateDiscountedSubtotal().toFixed(2)}
+                  </div>
+                </div>
+              )}
+
               <div className="flex justify-between mt-2">
                 <div className="text-lg font-medium">Shipping:</div>
                 <div className="text-lg font-medium">Free</div>
@@ -150,7 +167,7 @@ export const Cart = () => {
               <div className="flex justify-between mt-2 border-t pt-4">
                 <div className="text-xl font-semibold">Total:</div>
                 <div className="text-xl font-semibold">
-                  ${calculateTotal().toFixed(2)}
+                  Rs. {calculateTotal().toFixed(2)}
                 </div>
               </div>
               <div className="mt-8 text-center">
