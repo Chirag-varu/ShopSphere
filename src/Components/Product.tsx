@@ -6,7 +6,7 @@ export const ProductCard = ({ product, addToCart }: { product: any; addToCart: F
       <div className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300">
         <div className="relative">
           {/* Image Section */}
-          <img src={product.image} alt={product.name} className="w-full object-cover rounded-2xl" />
+          <img src={product.image} alt={product.name} className="w-full object-cover rounded-2xl transition-transform transform hover:scale-105 duration-300" />
         </div>
         {/* Content Section */}
         <div className="p-4">
