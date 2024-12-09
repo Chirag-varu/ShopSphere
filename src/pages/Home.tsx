@@ -35,9 +35,33 @@ import pay from "../assets/img/pay/pay.png";
 import play from "../assets/img/pay/play.jpg";
 import { useCart } from "../Components/CartContext";
 import { ProductCard } from "../Components/Product";
+import { useState } from "react";
 
 export function Home() {
   const { addToCart } = useCart();
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSignUp = () => {
+    if (/\S+@\S+\.\S+/.test(email)) {
+      // If email is valid, show success message and clear input
+      setMessage("Email has been sent!");
+      setEmail(""); // Clear the email input
+
+      // Clear the message after 3 seconds
+      setTimeout(() => {
+        setMessage("");
+      }, 3000);
+    } else {
+      // If email is invalid, show error message
+      setMessage("Please enter a valid email.");
+
+      // Clear the message after 3 seconds
+      setTimeout(() => {
+        setMessage("");
+      }, 3000);
+    }
+  };
 
   const products = [
     {
@@ -234,7 +258,7 @@ export function Home() {
           />
         ))}
       </div>
-        
+
       {/* Repair Services */}
       <div
         className="w-full h-80 bg-cover bg-center relative"
@@ -246,7 +270,7 @@ export function Home() {
             Up to <span className="text-[#ef3636]">70% Off</span> - All t-Shirts
             & Accessories
           </p>
-          <button className="bg-slate-50 text-black hover:bg-slate-500 hover:text-cyan-600 mt-4 px-6 py-2 rounded-md ">
+          <button className="bg-slate-50 text-black hover:bg-[#ef3636] hover:text-white mt-4 px-6 py-2 rounded-md ">
             Explore More
           </button>
         </div>
@@ -273,7 +297,7 @@ export function Home() {
       {/* News letter */}
       <section
         id="newsletter"
-        className="bg-cover bg-center py-8 px-6 mb-8 mt-8"
+        className="bg-cover bg-center py-8 px-6 mb-8 mt-8 flex flex-col items-center justify-center"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1472289065668-ce650ac443d2?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
         }}
@@ -288,15 +312,28 @@ export function Home() {
           </p>
         </div>
         <div className="flex justify-center gap-4">
+          {/* Email Input */}
           <input
             type="text"
             placeholder="Your email address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="border border-gray-300 rounded-lg px-4 py-2 w-80 focus:outline-none focus:ring-2 focus:ring-red-400"
           />
-          <button className="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600">
+
+          {/* Sign Up Button */}
+          <button
+            className="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600"
+            onClick={handleSignUp}
+          >
             Sign Up
           </button>
         </div>
+
+        {/* Message Feedback */}
+        {message && (
+          <p className="mt-4 text-sm text-green-600 font-semibold">{message}</p>
+        )}
       </section>
 
       {/* Footer */}

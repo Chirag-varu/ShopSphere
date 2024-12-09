@@ -14,9 +14,16 @@ export const Cart = () => {
   const [couponCode, setCouponCode] = useState("");
   const [discount, setDiscount] = useState(0);
 
-  const handleQuantityChange = (id: number, quantity: number) => {
-    addToCart({ id, name: "", price: 0, quantity, image: "" }); // Call addToCart to update quantity
+  const handleQuantityChange = (id: number, increment: number) => {
+    const item = cart.find((item) => item.id === id);
+    if (item) {
+      const newQuantity = item.quantity + increment;
+      if (newQuantity > 0) {
+        addToCart({ ...item, quantity: newQuantity }); // Update the quantity based on the current item
+      }
+    }
   };
+  
 
   const handleRemoveItem = (id: number) => {
     removeFromCart(id);
@@ -93,7 +100,7 @@ export const Cart = () => {
                         <div className="flex items-center space-x-2">
                           <button
                             onClick={() =>
-                              handleQuantityChange(item.id, item.quantity - 1)
+                              handleQuantityChange(item.id, -1)
                             }
                             className="px-3 py-1 bg-gray-200 rounded-full"
                           >
@@ -102,7 +109,7 @@ export const Cart = () => {
                           <span className="text-lg">{item.quantity}</span>
                           <button
                             onClick={() =>
-                              handleQuantityChange(item.id, item.quantity + 1)
+                              handleQuantityChange(item.id, 1)
                             }
                             className="px-3 py-1 bg-gray-200 rounded-full"
                           >
@@ -217,50 +224,50 @@ export const Cart = () => {
             <h4 className="text-xl font-bold mb-4">About</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-cyan-600">
+                <a href="#" className="hover:text-cyan-500">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-600">
-                  Delivery Information
+                <a href="#" className="hover:text-cyan-500">
+                  Careers
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-600">
-                  Terms & Conditions
+                <a href="#" className="hover:text-cyan-500">
+                  Press
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-600">
-                  Privacy Policy
+                <a href="#" className="hover:text-cyan-500">
+                  Blog
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* My Account Section */}
+          {/* Help Section */}
           <div>
-            <h4 className="text-xl font-bold mb-4">My Account</h4>
+            <h4 className="text-xl font-bold mb-4">Help</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-cyan-600">
-                  My Account
+                <a href="#" className="hover:text-cyan-500">
+                  FAQs
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-600">
-                  My Orders
+                <a href="#" className="hover:text-cyan-500">
+                  Shipping & Returns
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-600">
-                  My Wishlist
+                <a href="#" className="hover:text-cyan-500">
+                  Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-600">
-                  Checkout
+                <a href="#" className="hover:text-cyan-500">
+                  Terms of Service
                 </a>
               </li>
             </ul>
@@ -270,18 +277,18 @@ export const Cart = () => {
           <div>
             <h4 className="text-xl font-bold mb-4">Newsletter</h4>
             <p className="mb-4">
-              Sign up to receive special offers, discounts, and more.
+              Get updates about our latest product and offers.
             </p>
-            <form className="flex">
+            <div className="flex space-x-4">
               <input
                 type="email"
+                className="w-2/3 p-2 border border-gray-300 rounded-md"
                 placeholder="Enter your email"
-                className="px-4 py-2 border border-gray-300 rounded-l-md w-full"
               />
-              <button className="bg-blue-600 text-white px-6 py-2 rounded-r-md hover:bg-blue-700">
+              <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
                 Subscribe
               </button>
-            </form>
+            </div>
           </div>
         </div>
       </footer>

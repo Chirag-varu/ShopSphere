@@ -20,11 +20,13 @@ export default function Navbar() {
     <nav className="flex items-center justify-between py-4 px-6 sm:px-10 md:px-20 w-full bg-[#e3e6f3] sticky top-0 left-0 drop-shadow-md z-50 h-[5.8rem]">
       {/* Logo */}
       <div>
-        <img
-          src={banner}
-          alt="Logo"
-          className="bg-transparent w-[8rem] sm:w-[10rem] md:w-[15rem]"
-        />
+        <Link to="/" onClick={closeMenu}>
+          <img
+            src={banner}
+            alt="Logo"
+            className="bg-transparent w-[8rem] sm:w-[10rem] md:w-[15rem]"
+          />
+        </Link>
       </div>
 
       {/* Hamburger Menu Icon */}
