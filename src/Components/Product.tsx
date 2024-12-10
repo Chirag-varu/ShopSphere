@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export const ProductCard = ({
   product,
@@ -10,10 +11,21 @@ export const ProductCard = ({
   addToCart: Function;
 }) => {
   const navigate = useNavigate();
+  const [isClicked, setIsClicked] = useState(false);
 
   const handleProductdetail = () => {
     navigate(`/productdetail/${product.id}`);
   };
+
+  const handleIconClick = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent navigation or parent click event
+    setIsClicked(true); // Set state to true for red color
+    addToCart(product); // Call the addToCart function
+
+    // Reset the color after 3 seconds
+    setTimeout(() => setIsClicked(false), 3000);
+  };
+
   return (
     <div
       className="max-w-sm mx-auto bg-white rounded-[2rem] shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 p-4 mb-4 border border-gray-300"
@@ -49,11 +61,8 @@ export const ProductCard = ({
           </span>
           <FontAwesomeIcon
             icon={faCartShopping}
-            className="cursor-pointer"
-            onClick={(e) => {
-              e.stopPropagation(); // Prevent navigation on icon click
-              addToCart(product);
-            }}
+            className={`cursor-pointer ${isClicked ? "text-[#ef3636]" : "text-black"}`}
+            onClick={handleIconClick}
           />
         </div>
       </div>

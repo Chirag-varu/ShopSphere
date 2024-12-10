@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import {
   FaFacebookSquare,
@@ -20,6 +20,15 @@ export const Productdetail: React.FC<{ products: any[] }> = ({ products }) => {
   const { addToCart } = useCart();
   const { id } = useParams<{ id: string }>();
   const product = products.find((p) => p.id === Number(id));
+  const [message, setMessage] = useState("");
+
+  const handleAddtocart = () => {
+    setMessage("product is added to cart!");
+    addToCart(product);
+    setTimeout(() => {
+      setMessage("");
+    }, 3000);
+  };
 
   if (!product) {
     return (
@@ -80,10 +89,17 @@ export const Productdetail: React.FC<{ products: any[] }> = ({ products }) => {
 
               <button
                 className="px-6 sm:px-8 py-2 sm:py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full shadow-md hover:shadow-lg hover:scale-105 transition duration-300"
-                onClick={() => addToCart(product)}
+                onClick={handleAddtocart}
               >
                 Add to Cart
               </button>
+
+              {/* Message Add to cart */}
+              {message && (
+                <p className="mt-4 text-sm text-green-600 font-semibold">
+                  {message}
+                </p>
+              )}
 
               <div className="mt-6 space-y-2 text-sm text-gray-500">
                 <p>✔ 100% Original product.</p>
