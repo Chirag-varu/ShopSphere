@@ -14,16 +14,20 @@ export const Cart = () => {
   const [couponCode, setCouponCode] = useState("");
   const [discount, setDiscount] = useState(0);
 
-  const handleQuantityChange = (id: number, increment: number) => {
+  const handleQuantityIncrease = (id: number) => {
     const item = cart.find((item) => item.id === id);
     if (item) {
-      const newQuantity = item.quantity + increment;
-      if (newQuantity > 0) {
-        addToCart({ ...item, quantity: newQuantity }); // Update the quantity based on the current item
-      }
+      addToCart({ ...item, quantity: item.quantity + 1 });
     }
   };
-  
+
+  const handleQuantityDecrease = (id: number) => {
+    const item = cart.find((item) => item.id === id);
+    if (item && item.quantity > 1) {
+      addToCart({ ...item, quantity: --item.quantity });
+      --item.quantity;
+    }
+  };
 
   const handleRemoveItem = (id: number) => {
     removeFromCart(id);
@@ -99,18 +103,14 @@ export const Cart = () => {
                       <td className="px-6 py-4">
                         <div className="flex items-center space-x-2">
                           <button
-                            onClick={() =>
-                              handleQuantityChange(item.id, -1)
-                            }
+                            onClick={() => handleQuantityDecrease(item.id)}
                             className="px-3 py-1 bg-gray-200 rounded-full"
                           >
                             -
                           </button>
                           <span className="text-lg">{item.quantity}</span>
                           <button
-                            onClick={() =>
-                              handleQuantityChange(item.id, 1)
-                            }
+                            onClick={() => handleQuantityIncrease(item.id)}
                             className="px-3 py-1 bg-gray-200 rounded-full"
                           >
                             +

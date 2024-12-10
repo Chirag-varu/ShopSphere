@@ -26,7 +26,7 @@ import n6 from "./assets/img/products/n6.jpg";
 import n7 from "./assets/img/products/n7.jpg";
 import n8 from "./assets/img/products/n8.jpg";
 
-const products = [
+const allproducts = [
   {
     id: 1,
     name: "Cartoon Astronaut T-Shirts",
@@ -170,7 +170,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Cart" element={<Cart />} />
-          <Route path="/productdetail/:id" element={<Productdetail products={products}/>} />
+          <Route path="/productdetail/:id" element={<Productdetail products={allproducts}/>} />
         </Routes>
       </Router>
     </CartProvider>
