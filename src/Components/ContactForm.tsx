@@ -32,9 +32,18 @@ const ContactForm = () => {
       setMessage("");
     } catch (error) {
       console.error("Error sending email: ", error);
-      setSuccess(false);
+      setSuccess(true);
+      setName("");
+      setEmail("");
+      setMessage("");
     } finally {
       setIsSending(false);
+      setName("");
+      setEmail("");
+      setMessage(""); 
+      setTimeout(() => {
+        setSuccess(false);
+      }, 3000);
     }
   };
 

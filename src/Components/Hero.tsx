@@ -1,6 +1,12 @@
 import Hero1 from "../assets/img/hero4.png";
+import { useNavigate } from "react-router-dom";
 
 export function Hero() {
+  const navigate = useNavigate();
+
+  const handleShownow = () => {
+    navigate("/Shop");
+  }
   return (
     <div className="bg-[#e3e6f3] flex items-center justify-center h-[25rem] md:h-[40.8rem] lg:h-[45.9rem] relative overflow-hidden w-full">
       <div className="z-10 absolute md:left-24 left-8">
@@ -26,7 +32,7 @@ export function Hero() {
           Save more with coupons <br />& up to 70% off!
         </p>
 
-        <button className="bg-transparent bg-[url('/src/assets/button.png')] bg-no-repeat text-[#088178] px-14 sm:px-20 py-2 sm:py-3.5 border-0 cursor-pointer font-bold text-sm">
+        <button className="bg-transparent bg-[url('/src/assets/button.png')] bg-no-repeat text-[#088178] px-14 sm:px-20 py-2 sm:py-3.5 border-0 cursor-pointer font-bold text-sm" onClick={handleShownow}>
           Shop Now
         </button>
       </div>
