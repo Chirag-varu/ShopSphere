@@ -8,7 +8,7 @@ export function Hero() {
     navigate("/Shop");
   }
   return (
-    <div className="bg-[#e3e6f3] flex items-center justify-center h-[25rem] md:h-[40.8rem] lg:h-[45.9rem] relative overflow-hidden w-full">
+    <div className="bg-[#e3e6f3] flex items-center justify-center h-[25rem] md:h-[41rem] lg:h-[48rem] relative overflow-hidden w-full">
       <div className="z-10 absolute md:left-24 left-8">
         <p
           className="text-2xl mb-3"
@@ -40,7 +40,7 @@ export function Hero() {
         <img
           src={Hero1}
           alt=""
-          className="md:h-[46rem] h-[25rem] scale-125 bg-transparent z-30"
+          className="md:h-[47rem] h-[25rem] scale-125 bg-transparent z-30"
         />
       </div>
     </div>
