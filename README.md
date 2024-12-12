@@ -17,6 +17,12 @@ Live link: https://shop-sphere-eta-five.vercel.app/
 
 ---
 
+![Screenshot (31)](https://github.com/user-attachments/assets/dc6c6a90-166c-4cbc-98e9-690ce9a0b8db)
+![Screenshot (32)](https://github.com/user-attachments/assets/cb7c8fc5-41c5-458d-af1f-fddb0107d730)
+![Screenshot (34)](https://github.com/user-attachments/assets/e858dc3d-552a-462a-8c54-020190231a3d)
+![Screenshot (35)](https://github.com/user-attachments/assets/b069b51d-764f-4f86-99bd-c3f676001733)
+
+
 ## Tech Stack 🛠️
 
 ### Frontend:
