@@ -33,22 +33,14 @@ and many more here: https://shop-sphere-eta-five.vercel.app/
 
 ## Tech Stack 🛠️
 
-### Frontend:
 - **React** (with TypeScript)
 - **Tailwind CSS**
-
-### Backend:
-- **Node.js**
-- **Express.js**
-- **MongoDB**
+- **Tailwind Components**
+- **Emailjs**
 
 ---
 
 ## Installation ⚙️
-
-### Prerequisites:
-- **Node.js** installed on your machine.
-- **MongoDB** set up (local or Atlas).
 
 ### Steps to Run Locally:
 
